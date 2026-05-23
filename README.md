@@ -9,7 +9,7 @@
 
 ## O que é
 
-NX-AC é um anti-cheat **server-side** profissional para servidores SA-MP e open.mp. Toda detecção acontece no servidor — sem launcher, sem DLL client-side, sem modificação no cliente do jogador.
+NX-AC é um anti-cheat profissional para servidores SA-MP e open.mp. Toda detecção acontece no servidor.
 
 O sistema analisa os sync packets enviados pelo cliente via RakNet, valida o comportamento temporal do jogador e aplica heurísticas para identificar trapaças com baixo índice de falsos positivos.
 
@@ -39,22 +39,12 @@ Risk >= threshold → Kick / Ban automático
 
 ## Instalação Rápida
 
-### 1. Compilar o plugin
-
-```bash
-mkdir build && cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release
-cmake --build . --config Release
-```
-
-Veja [`docs/BUILDING.md`](docs/BUILDING.md) para instruções detalhadas por plataforma.
-
-### 2. Instalar no servidor
+### 1. Instalar no servidor
 
 ```
 samp-server/
 ├── plugins/
-│   └── nx_ac.dll          (Windows) ou nx_ac.so (Linux)
+│   └── nx_ac.dll          (Windows)
 ├── config/
 │   └── nx_ac.json         ← configuração principal
 └── pawno/
@@ -62,7 +52,7 @@ samp-server/
         └── nx_ac.inc      ← include Pawn
 ```
 
-### 3. Registrar no servidor
+### 2. Registrar no servidor
 
 **SA-MP — server.cfg:**
 ```
@@ -78,7 +68,7 @@ plugins nx_ac
 }
 ```
 
-### 4. Incluir no seu script
+### 3. Incluir no seu script
 
 ```pawn
 #define NX_AC_AUTO_CALLBACKS
@@ -286,17 +276,6 @@ cmake --build . --config Release
 ```
 
 Dependências baixadas automaticamente: `nlohmann/json 3.11.3`, `cpr 1.10.5`.
-
----
-
-## Roadmap
-
-- [ ] Bindings Lua
-- [ ] API Node.js + WebSocket live logs
-- [ ] Dashboard React
-- [ ] NX Cloud — bans globais compartilhados
-- [ ] Machine Learning anti-cheat
-- [ ] Analytics por jogador
 
 ---
 
