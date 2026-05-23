@@ -1,3 +1,17 @@
+/*
+ * ============================================================
+ *  NX AntiCheat (NX-AC)
+ *
+ *  Version       : 1.0.0
+ *  Developer     : RickZin021
+ *  Language      : C++17
+ *  Compatibility : SA-MP 0.3.7 / open.mp
+ *
+ *  Copyright (c) 2026 RickZin021
+ *  All rights reserved.
+ * ============================================================
+ */
+
 #include <a_samp>
 
 #define NX_AC_AUTO_CALLBACKS
