@@ -1,7 +1,7 @@
 # NX AntiCheat (NX-AC)
 
 **Versão:** 1.0.0  
-**Desenvolvido por:** Nexorix  
+**Desenvolvido por:** RickZin021  
 **Compatibilidade:** SA-MP 0.3.7 · open.mp  
 **Linguagem:** C++17  
 
