@@ -3,7 +3,6 @@
 **Versão:** 1.0.0  
 **Desenvolvido por:** RickZin021  
 **Compatibilidade:** SA-MP 0.3.7 · open.mp  
-**Linguagem:** C++17  
 
 ---
 
@@ -227,55 +226,8 @@ Veja [`docs/WEBHOOK.md`](docs/WEBHOOK.md) para detalhes.
 | Arquivo                              | Descrição                              |
 |--------------------------------------|----------------------------------------|
 | `examples/basic_gamemode.pwn`        | Integração em gamemode com callbacks   |
-| `examples/filterscript_example.pwn`  | Integração como filterscript com admin |
 
 Veja [`examples/README.md`](examples/README.md) para guia de uso dos exemplos.
-
----
-
-## Estrutura do Projeto
-
-```
-nx-ac/
-├── plugin/
-│   ├── core/           # Plugin principal, Config, RiskSystem, PlayerData, EventDispatcher
-│   ├── modules/        # Detectores independentes (um arquivo por módulo)
-│   ├── hooks/          # RakNetHook, SyncHook, RPCHook
-│   ├── network/        # PacketValidator, SyncValidator
-│   ├── webhook/        # WebhookManager, WebhookQueue (async)
-│   ├── utils/          # Logger, Timer, MathUtils, StringUtils
-│   ├── events/         # EventTypes e mapeamento de IDs
-│   ├── sampapi/        # Headers SA-MP / AMX
-│   └── main.cpp        # Entry point do plugin (Load/Unload/AmxLoad)
-├── include/
-│   └── nx_ac.inc       # Interface Pawn completa
-├── config/
-│   └── nx_ac.json      # Configuração principal
-├── examples/           # Exemplos prontos de uso
-├── docs/               # Documentação técnica
-├── logs/               # Logs gerados em runtime
-└── CMakeLists.txt      # Build system
-```
-
----
-
-## Compilar
-
-Requisitos: CMake 3.16+, C++17 compiler, Git.
-
-```bash
-# Linux
-mkdir build && cd build
-cmake .. -DCMAKE_BUILD_TYPE=Release
-make -j$(nproc)
-
-# Windows (MSVC)
-mkdir build && cd build
-cmake .. -G "Visual Studio 17 2022" -A Win32
-cmake --build . --config Release
-```
-
-Dependências baixadas automaticamente: `nlohmann/json 3.11.3`, `cpr 1.10.5`.
 
 ---
 
